@@ -1,4 +1,3 @@
- @charset "gb2312";
 .l_box { width: 30%; float: left }
 .r_box { width: 68%; float: right }
 .l_box h2 { color: #333; font-size: 14px; line-height: 30px; padding-left: 20px; background: #fff }
@@ -23,7 +22,7 @@
 .r_box li h3 a { color: #222 }
 .r_box li h3 a:hover { color: #000; text-decoration: underline }
 .r_box li img { float: right; clear: right; width: 100%; -webkit-transition: all 0.5s; -moz-transition: all 0.5s; transition: all 0.5s; }
-.r_box li i { width: 150px; display: block; max-height: 100px; overflow: hidden; float: right; margin-left: 20px }
+.r_box li i { width: 150px; display: block; float: right; align-items: center;/*垂直居中*/margin-left: 20px ;}
 .r_box li p { margin: 20px 0 0 0; line-height: 22px;  -webkit-box-orient: vertical; display: -webkit-box;  }
  /*-webkit-line-clamp: 2;用来限制在一个块元素显示的文本的行数。*/
  .r_box li:hover img { transform: scale(1.05) }
@@ -56,3 +55,10 @@ a.curPage { color: #19585d; font-weight: bold; }
 .picinfo h3 { border-bottom: #ccc 1px solid; padding: 10px 0; margin: 0 20px; font-size:16px }
 .picinfo span { padding:10px 20px; display: block; color: #666; }
 .picbox ul li a:hover{ color:#19585d}
+#tooltip{
+ display: inline-block;
+ border: 2px solid black;
+ position: absolute;
+ background-color: black;
+ color: #ffffff;
+}

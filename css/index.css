@@ -48,10 +48,10 @@ a.curPage { color: #19585d; font-weight: bold; }
 .cloud ul a:last-child { background: #3299BB }
 .cloud ul a:hover { border-radius: 0; text-shadow: #000 1px 1px 1px }
 .picbox { width: 100%; overflow: hidden;  }
-.picbox ul { overflow: hidden; width: 24%; float: left; margin-right:10px }
-.picbox ul li { display: block; background: #FFF; margin: 0 0 20px 0; border: 1px #d9d9d9 solid; }
+.picbox ul { overflow: hidden; width: 24%; float: left; margin-right:10px;}
+.picbox ul li { display: block; background: #FFF; margin: 0 0 20px 0; border: 1px #d9d9d9 solid;height:310px;}
 .picbox ul li i { margin: 10px; height: auto; overflow: hidden; display: block; }
-.picbox ul li img { width: 100%; }
+.picbox ul li img {  height: 164px;width: 220px; }
 .picinfo h3 { border-bottom: #ccc 1px solid; padding: 10px 0; margin: 0 20px; font-size:16px }
 .picinfo span { padding:10px 20px; display: block; color: #666; }
 .picbox ul li a:hover{ color:#19585d}

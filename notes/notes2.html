@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>剑指offer刷题笔记（2）</title>
+</head>
+<body>
+  <button><a href="../list.html">返回笔记列表</a></button>
+  <h1>总结一下JavaScript 中的 for 循环</h1>
+  <h3> 简单for 循环---循环代码块一定的次数</h3>
+  <p>不再赘述</p>
+  <h3>for-in---循环遍历对象的属性</h3>
+  <p>
+    for-in 循环遍历的是对象的属性，而不是数组的索引。因此， for-in 遍历的对象不局限于数组，还可以遍历对象。<br>
+    Array 在 Javascript 中是一个对象， Array 的索引是属性名。此处输出的索引值，即 “0″、 “1″、 “2″不是 Number 类型的，而是 String 类型的，因为其就是作为属性输出，而不是索引。<br>
+    for-in 只能遍历“可枚举的属性”， length 属于不可枚举属性，实际上， Array 对象还有许多其他不可枚举的属性。<br>
+    for-in 不仅仅遍历 array 自身的属性，其还遍历 array 原型链上的所有可枚举的属性。<br>
+    for-in 并不适合用来遍历 Array 中的元素，其更适合遍历对象中的属性，这也是其被创造出来的初衷。却有一种情况例外，就是稀疏数组。<br>
+    for-in 循环的每次迭代操作会同时搜索实例或者原型属性， 会产生更多开销，因此要比其他循环类型慢，一般速度为其他类型循环的 1/7。因此，除非明确需要迭代一个属性数量未知的对象，否则应避免使用 for-in 循环。如果需要遍历一个数量有限的已知属性列表，使用其他循环会更快<br>
+
+  </p>
+  <h3>forEach---ES5引入新循环</h3>
+  <p>
+    forEach 方法为数组中含有有效值的每一项执行一次 callback 函数，那些已删除（使用 delete 方法等情况）或者从未赋值的项将被跳过（不包括那些值为 undefined 或 null 的项）。 callback 函数会被依次传入三个参数：<br>
+    数组当前项的值；<br>
+    数组当前项的索引；<br>
+    数组对象本身；<br>
+    添加数组当前项的索引参数，注意callback 函数中的三个参数顺序是固定的，不可以调整。<br>
+    需要注意的是，forEach 遍历的范围在第一次调用 callback 前就会确定。调用forEach 后添加到数组中的项不会被 callback 访问到。如果已经存在的值被改变，则传递给 callback 的值是 forEach 遍历到他们那一刻的值。已删除的项不会被遍历到。<br>
+    forEach的index 是 Number 类型，并且也不会像 for-in 一样遍历原型链上的属性。<br>
+    所以，使用 forEach 时，我们不需要专门地声明 index 和遍历的元素，因为这些都作为回调函数的参数。<br>
+    另外，forEach 将会遍历数组中的所有元素，但是 ES5 定义了一些其他有用的方法，下面是一部分：<br>
+    every: 循环在第一次 return false 后返回<br>
+    some: 循环在第一次 return true 后返回<br>
+    filter: 返回一个新的数组，该数组内的元素满足回调函数<br>
+    map: 将原数组中的元素处理后再返回<br>
+    reduce: 对数组中的元素依次处理，将上次处理结果作为下次处理的输入，最后得到最终结果。<br>
+
+  </p>
+  <h3>for-of---ES6新引入循环</h3>
+  <p>
+    ES6之前的 3 种 for 循环有什么缺陷：
+    forEach 不能 break 和 return；
+    for-in 缺点更加明显，它不仅遍历数组中的元素，还会遍历自定义的属性，甚至原型链上的属性都被访问到。而且，遍历数组元素的顺序可能是随机的。<br>
+    所以，鉴于以上种种缺陷，我们需要改进原先的 for 循环。但 ES6 不会破坏你已经写好的 JS 代码。目前，成千上万的 Web 网站依赖 for-in 循环，其中一些网站甚至将其用于数组遍历。如果想通过修正 for-in 循环增加数组遍历支持会让这一切变得更加混乱，因此，标准委员会在 ES6 中增加了一种新的循环语法来解决目前的问题，即 for-of 。<br>
+    那 for-of 到底可以干什么呢？<br>
+    跟 forEach 相比，可以正确响应 break, continue, return。<br>
+    for-of 循环不仅支持数组，还支持大多数类数组对象，例如 DOM nodelist 对象。<br>
+    for-of 循环也支持字符串遍历，它将字符串视为一系列 Unicode 字符来进行遍历。<br>
+    for-of 也支持 Map 和 Set （两者均为 ES6 中新增的类型）对象遍历。<br>
+    总结一下，for-of 循环有以下几个特征：<br>
+    这是最简洁、最直接的遍历数组元素的语法。<br>
+    这个方法避开了 for-in 循环的所有缺陷。<br>
+    与 forEach 不同的是，它可以正确响应 break、continue 和 return 语句。<br>
+    其不仅可以遍历数组，还可以遍历类数组对象和其他可迭代对象。<br>
+    但需要注意的是，for-of循环不支持普通对象，但如果你想迭代一个对象的属性，你可以用 for-in 循环（这也是它的本职工作）。<br>
+
+  </p>
+  <button><a href="#">回到顶部</a></button>
+</body>
+</html>

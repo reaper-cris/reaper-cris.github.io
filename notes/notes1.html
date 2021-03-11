@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>剑指offer刷题笔记（1）</title>
+</head>
+<body>
+  <button><a href="../list.html">返回笔记列表</a></button>
+  <h1>###  **ES6 提供了新的数据结构 Set。**</h1>
+    它类似于数组，但是成员的值都是唯一的，没有重复的值。
+    <h3>**一、创建Set对象实例**</h3>
+    Set 对象允许你存储任何类型的唯一值，无论是原始值或者是对象引用<br>
+    1.构造函数<br>
+    语法：new Set([iterable])<br>
+    参数： iterable 如果传递一个可迭代对象，它的所有元素将被添加到新的 Set中；如果不指定此参数或其值为null，则新的 Set为空<br>
+    <h3>**二、Set实例属性**</h3>
+    1.size属性将会返回Set对象中元素的个数
+    <h3>**三、Set实例方法**</h3>
+    <p>
+      1.add() 方法用来向一个 Set 对象的末尾添加一个指定的值 <br>
+      语法：mySet.add(value)<br>
+      参数：value 必需，需要添加到 Set 对象的元素的值<br>
+      2.delete() 方法可以从一个 Set 对象中删除指定的元素<br>
+      语法：mySet.delete(value)<br>
+      参数：value 将要删除的元素<br>
+      返回值：成功删除返回 true，否则返回 false<br>
+      3.clear() 方法用来清空一个 Set 对象中的所有元素<br>
+      语法：mySet.clear()<br>
+      4.has() 方法返回一个布尔值来指示对应的值value是否存在Set对象中<br>
+      语法：mySet.has(value)<br>
+      参数：value 必须，是否存在于Set的值<br>
+      返回值：如果指定的值（value）存在于Set对象当中，返回true; 否则返回 false<br>
+      5.entries()<br>
+      语法：mySet.entries()<br>
+      返回值：一个新的包含 [value, value] 形式的数组迭代器对象，value 是给定集合中的每个元素，迭代器 对象元素的顺序即集合对象中元素插入的顺序<br>
+      6.values()<br>
+      语法：mySet.values() 或者 mySet.keys()<br>
+      返回值：返回一个 Iterator 对象，这个对象以插入Set 对象的顺序包含了原 Set 对象里的每个元素<br>
+      7.forEach()<br>
+      语法：mySet.forEach(callback[, thisArg])<br>
+      参数：callback 每个元素都会执行的函数；thisArg 当执行callback函数时候，可以当作this来使用<br>
+    </p>
+
+  <button><a href="#">回到顶部</a></button>
+</body>
+</html>
